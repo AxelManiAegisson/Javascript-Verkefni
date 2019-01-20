@@ -10,7 +10,7 @@
 var er gamla leiðinn til að gera breytur og var með nokkra galla í henni t.d. ekkert block scoping og hoisting tekur bara breytuna ekki innihaldið, let er block scoped er ekki hoistað, const er 
 eiginlega alveg eins og let en er: read-only og það er ekki hægt að endurskrifa eða að láta einhvað annað í það ef það er búið að láta í hana
 
-#4*/
+#4
 
 let numbers = [1,2,3,4,5,6,7,8,9];
 let x;
@@ -19,7 +19,7 @@ for (x = 0; x< numbers.length; x++) {
 }
 
 
-/*#5*/
+/*#5
 function cat(){
 	let pet = "cat";
 	let petMsg = "meow";
@@ -43,3 +43,35 @@ function b() {
 }
 b();
 console.log(a);
+
+#8
+// Write your code here
+test.forEach(function (value, i, arr) {
+    if (value % 3 === 0) {
+        value += 100;
+        arr[i] = value;
+        console.log(value)
+    }
+});
+
+console.log(test)
+
+
+#9
+var bills = [50.23, 19.12, 34.01,
+    100.11, 12.15, 9.90, 29.11, 12.99,
+    10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+var totals = bills.map(function(money) {
+  money *= 1.15;
+  return money;
+});
+console.log(totals)
+
+#10
+
+function recurse(){
+    recurse();
+}
+
+recurse();
