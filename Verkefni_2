@@ -1,0 +1,36 @@
+1.
+let user  = {
+	nafn: "Axel Máni", 
+	kennitala: 2507002960, 
+	heimilisfang: "Blikaás 21",
+	heimasimi: 5812345,
+	gsm: 6187479,
+	NoA: function() {return "Axel: 18 ára"}
+};
+
+2.
+for (let key in user) {
+	console.log(key, user[key]);
+}
+
+3.
+user.NoA();
+
+4.
+let family = {
+	"parents":
+	{
+		"fathers": [{"name":"Jakob"},{"name":"Nonni"}],
+		"mothers":[{"name":"Rakel"},{"name":"Sara"}]
+	}
+ };
+console.log(family.parents.fathers[1].name);
+
+5.
+let breakfast = {
+    name: "The Lumberjack",
+    price: "$9.95",
+    ingredients: "eggs, sausage, toast, hashbrowns, pancakes"
+};
+
+console.log(breakfast);
