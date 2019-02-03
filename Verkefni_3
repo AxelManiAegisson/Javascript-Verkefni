@@ -1,0 +1,37 @@
+1.
+Þeir tengjast með prototypes.
+
+2.
+1# Hér er verið að gera functionið Book sem tekur isbn inn sem gildi.
+2# Hér er verið að segja að this.isbn = isbn
+3# Hér er verið að gera nýtt function sem heitir getIsbn og það á að skrifa textan út.
+4# Hér er verið að búa til nýtt object með sömu eiginleikum og Book.
+
+3.
+a)
+   function Geimflaug(speed,life){
+    this.speed = speed;
+    this.life = life;
+   } 
+b)
+   let f1 = new Geimflaug(7,10);
+   let f2 = new Geimflaug(6,10);
+   let f3 = new Geimflaug(10,10);
+c)
+   Geimflaug.prototype.fly function(){
+    this.speed++
+   }
+d)
+   f1.prototype.setLife function(){
+    this.life++
+   }
+ 
+4.
+class Geimflaug{
+  constructor(){
+   this.speed = 10;
+   this.life = 10;
+  
+  }
+
+}
