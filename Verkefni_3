@@ -19,19 +19,24 @@ b)
    let f3 = new Geimflaug(10,10);
 c)
    Geimflaug.prototype.fly function(){
-    this.speed++
+    this.speed++;
    }
 d)
    f1.prototype.setLife function(){
-    this.life++
+    this.life++;
    }
  
 4.
 class Geimflaug{
   constructor(){
    this.speed = 10;
-   this.life = 10;
-  
+   this.life = 10;  
   }
-
+  fly(){
+   this.speed++;
+  }
 }
+
+
+5.
+Clasar eru eins og blueprints af því sem þú villt gera en prototypes eru að gera objecta úr öðrum objectum.
