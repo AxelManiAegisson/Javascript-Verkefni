@@ -1,7 +1,6 @@
 const canvas = document.querySelector(".canvas");
 const ctx = canvas.getContext("2d");
-const scale = 10;
-//
+const scale = 20;
 const rows = canvas.height / scale;
 const cols = canvas.width / scale;
 
@@ -9,17 +8,19 @@ var snake;
 
 (function setup () {
 	snake = new Snake();
-	snake.draw();
+	fruit = new Fruit();
+
+	fruit.location();
+	console.log(fruit)
 
 	window.setInterval(() => {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		snake.update();
 		snake.draw();
-	}, 250)
-}())
+	}, 250);
+}());
 
 window.addEventListener('keydown', ((evt) => {
-	const dir = evt.key.replace('Arrow', '');
-	console.log(dir)
-	snake.changeDirection();
+	const direction = evt.key.replace('Arrow', '');
+	snake.changeDirection(direction);
 }));
